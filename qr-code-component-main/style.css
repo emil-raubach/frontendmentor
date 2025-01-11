@@ -25,7 +25,7 @@ img {
   width: 100%;
 }
 
-.container {
+main {
   max-width: 1440px;
   height: 100%;
   display: flex;
@@ -58,13 +58,14 @@ img {
 
 .card__title {
   font-weight: 700;
+  color: var(--tertiary-color);
   padding: 1rem 0.5rem;
   text-align: center;
 }
 
 .card__description {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--secondary-color);
   text-align: center;
   padding: 0 0.75rem;
