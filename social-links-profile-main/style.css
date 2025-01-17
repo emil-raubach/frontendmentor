@@ -89,8 +89,6 @@ main {
   background-color: var(--clr-green);
   cursor: pointer;
   color: var(--clr-grey-900);
-
-  /* How to get the link color to change too? */
 }
 
 .card__social-links a {
