@@ -11,7 +11,13 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Frontend Mentor | Recipe page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -30,6 +36,11 @@
       <!-- Header -->
       <header class="header">
         <div class="container">
+          <img
+            src="/assets/images/image-omelette.jpeg"
+            alt="Plate with an open omelet filled with fresh vegetables"
+            class="header__image"
+          />
           <h1 class="header__title">Simple Omelette Recipe</h1>
 
           <p class="header__description">
@@ -39,7 +50,7 @@
           </p>
 
           <div class="header__prep-time">
-            <h3>Preparation time</h3>
+            <h3 class="header__prep-time-title">Preparation time</h3>
 
             <ul class="header__prep-time-list">
               <li class="header__prep-time-list-item">
@@ -59,14 +70,14 @@
       <!-- Ingredients -->
       <section id="ingredients">
         <div class="container">
-          <h2>Ingredients</h2>
+          <h2 class="ingredients__title">Ingredients</h2>
 
-          <ul>
-            <li>2-3 large eggs</li>
-            <li>Salt, to taste</li>
-            <li>Pepper, to taste</li>
-            <li>1 tablespoon of butter or oil</li>
-            <li>
+          <ul class="ingredients-list">
+            <li class="ingredients-list-item">2-3 large eggs</li>
+            <li class="ingredients-list-item">Salt, to taste</li>
+            <li class="ingredients-list-item">Pepper, to taste</li>
+            <li class="ingredients-list-item">1 tablespoon of butter or oil</li>
+            <li class="ingredients-list-item">
               Optional fillings: cheese, diced vegetables, cooked meats, herbs
             </li>
           </ul>
@@ -76,43 +87,47 @@
       <!-- Instructions -->
       <section id="instructions">
         <div class="container">
-          <h2 class="instruction__title">Instructions</h2>
+          <h2 class="instructions__title">Instructions</h2>
           <ol class="instructions__list">
-            <strong>Beat the eggs:</strong>
-            In a bowl, beat the eggs with a pinch of salt and pepper until they
-            are well mixed. You can add a tablespoon of water or milk for a
-            fluffier texture.
+            <li class="instructions__list-item">
+              <strong>Beat the eggs:</strong>
+              In a bowl, beat the eggs with a pinch of salt and pepper until
+              they are well mixed. You can add a tablespoon of water or milk for
+              a fluffier texture.
+            </li>
 
-            <li>
+            <li class="instructions__list-item">
               <strong>Heat the pan:</strong> Place a non-stick frying pan over
               medium heat and add butter or oil.
             </li>
 
-            <li>
+            <li class="instructions__list-item">
               <strong>Cook the omelette:</strong> Once the butter is melted and
               bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly
               coat the surface.
             </li>
 
-            <li>
+            <li class="instructions__list-item">
               <strong>Add fillings (optional):</strong> When the eggs begin to
               set at the edges but are still slightly runny in the middle,
               sprinkle your chosen fillings over one half of the omelette.
             </li>
 
-            <li>
-              Fold and serve: As the omelette continues to cook, carefully lift
-              one edge and fold it over the fillings. Let it cook for another
-              minute, then slide it onto a plate.
+            <li class="instructions__list-item">
+              <strong>Fold and serve:</strong> As the omelette continues to
+              cook, carefully lift one edge and fold it over the fillings. Let
+              it cook for another minute, then slide it onto a plate.
             </li>
 
-            <li>
-              Enjoy: Serve hot, with additional salt and pepper if needed.
+            <li class="instructions__list-item">
+              <strong>Enjoy:</strong> Serve hot, with additional salt and pepper
+              if needed.
             </li>
           </ol>
         </div>
       </section>
 
+      <!-- Nutrition -->
       <section id="nutrition">
         <div class="container">
           <h2 class="nutrition__title">Nutrition</h2>
@@ -122,23 +137,25 @@
             additional fillings.
           </p>
 
-          <table>
-            <tr>
-              <td>Calories</td>
-              <td>277kcal</td>
-            </tr>
-            <tr>
-              <td>Carbs</td>
-              <td>0g</td>
-            </tr>
-            <tr>
-              <td>Protein</td>
-              <td>20g</td>
-            </tr>
-            <tr>
-              <td>Fat</td>
-              <td>22g</td>
-            </tr>
+          <table class="nutrition__table">
+            <tbody>
+              <tr class="nutrition__table-row">
+                <td>Calories</td>
+                <td>277kcal</td>
+              </tr>
+              <tr class="nutrition__table-row">
+                <td>Carbs</td>
+                <td>0g</td>
+              </tr>
+              <tr class="nutrition__table-row">
+                <td>Protein</td>
+                <td>20g</td>
+              </tr>
+              <tr class="nutrition__table-row">
+                <td>Fat</td>
+                <td>22g</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </section>
