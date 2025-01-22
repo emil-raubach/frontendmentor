@@ -21,24 +21,21 @@
     />
 
     <title>Frontend Mentor | Product preview card component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
       <div class="card">
         <div class="card__image">
           <picture>
-            <img src="./images/image-product-desktop.jpg" alt="" />
+            <img
+              src="./images/image-product-desktop.jpg"
+              srcset="
+                /images/image-product-mobile.jpg  480w,
+                /images/image-product-desktop.jpg 900w
+              "
+              sizes="(max-width: 768px) 480px, 900px"
+              alt="Square Chanel perfume bottle surrounded by green plants"
+            />
           </picture>
         </div>
         <div class="card__content">
@@ -56,12 +53,5 @@
         </div>
       </div>
     </main>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#"> Your Name Here</a>.
-    </div>
   </body>
 </html>

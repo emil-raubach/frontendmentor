@@ -1,6 +1,7 @@
 :root {
   /* Colors */
   --clr-dark-cyan: hsl(158, 36%, 37%);
+  --crl-deep-aquamarine: hsl(158, 42%, 18%);
   --clr-cream: hsl(30, 38%, 92%);
   --clr-very-dark-blue: hsl(212, 21%, 14%);
   --clr-dark-grayish-blue: hsl(228, 12%, 48%);
@@ -114,19 +115,30 @@ main {
 }
 
 .price__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
   font-family: var(--font-Montserrat);
+  font-weight: var(--font-weight-bold);
   width: 100%;
-  text-align: center;
   font-size: 14px;
   color: var(--clr-white);
-  padding: 1rem 2rem;
   background-color: var(--clr-dark-cyan);
   border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .price__button::before {
   content: url("/images/icon-cart.svg");
   margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.price__button:hover,
+.price__button:active {
+  background-color: var(--crl-deep-aquamarine);
 }
 
 /* Media Queries */
@@ -142,7 +154,7 @@ main {
   }
 
   .card__content {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5625rem;
   }
 
   .card__image img {
