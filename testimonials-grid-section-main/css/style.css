@@ -1,0 +1,50 @@
+:root {
+  /* Fonts */
+  --primary-font: "Barlow Semi Condensed";
+  --font-weight-regular: 400;
+  --font-weight-semi-bold: 600;
+
+  /* Colors */
+  --clr-moderate-violet: hsl(263, 55%, 52%);
+  --clr-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-dark-blackish-blue: hsl(219, 29%, 14%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  line-height: 1.125;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.testimonial__author {
+  display: flex;
+}
+
+.testimonial__image {
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.testimonial {
+}
