@@ -25,8 +25,13 @@
 
 body {
   font-family: var(--primary-font);
-  background-color: #f2f2f2;
+  background-color: var(--clr-light-grayish-blue);
   max-height: 100vh;
+}
+
+main {
+  display: grid;
+  place-content: center;
 }
 
 img {
@@ -35,7 +40,7 @@ img {
 
 .container {
   max-width: 1100px;
-  margin: 5rem auto;
+  margin: 10rem auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
