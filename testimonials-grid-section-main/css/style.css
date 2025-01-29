@@ -9,6 +9,7 @@
   --clr-dark-grayish-blue: hsl(217, 19%, 35%);
   --clr-dark-blackish-blue: hsl(219, 29%, 14%);
   --clr-white: hsl(0, 0%, 100%);
+
   /* Neutral Colors */
   --clr-light-gray: hsl(0, 0%, 81%);
   --clr-light-grayish-blue: hsl(210, 46%, 95%);
@@ -34,7 +35,6 @@ img {
 
 .container {
   max-width: 1100px;
-  /* max-height: 500px; */
   margin: 5rem auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -75,7 +75,6 @@ img {
 
 .testimonial__lead {
   font-size: 20px;
-  /* font-weight: var(--font-weight-semi-bold); */
   margin-bottom: 1rem;
 }
 
