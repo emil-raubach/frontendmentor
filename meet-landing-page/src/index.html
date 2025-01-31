@@ -1,31 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Meet landing page</title>
-</head>
-<body>
-  Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
 
-  Download v1.3
-  What is it?
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  01
-  Built for modern use
+    <title>Frontend Mentor | Meet landing page</title>
+  </head>
+  <body>
+    <main>
+      <!-- Navbar -->
+      <nav>
+        <div class="logo">
+          <img src="assets/logo.svg" alt="The meet logo" class="logo__image" />
+        </div>
+      </nav>
 
-  Smarter meetings, all in one place
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero__faces-left">
+          <!-- Update to add `srcset` for all screen sizes -->
+          <img src="assets/" alt="" class="hero__faces-left-image" />
+        </div>
+        <div class="text-content">
+          <h1 class="text-content__title">Group Chat for Everyone</h1>
+          <p class="text-content__description">
+            Meet makes it easy to connect with others face-to-face virtually and
+            collaborate across any device.
+          </p>
+          <div class="text-content__button-group">
+            <a href="#" class="text-content__button-download">Download v1.3</a>
+            <a href="#" class="text-content__button-info">What is it?</a>
+          </div>
+        </div>
+      </div>
 
-  Send messages, share files, show your screen, and record your meetings — all in one 
-  workspace. Control who can join with invite-only team access, data encryption, and data export.
+      <!-- Main Content -->
+      <section class="main-content">
+        <div class="main-content__number">01</div>
+        <div class="main-content__image-collage">
+          <img
+            src="assets/desktop/image-women-videochatting.jpg"
+            alt="Three older women video chatting on a cell phone held by the woman in the middle"
+            class="main-content__image"
+          />
+          <img
+            src="assets/desktop/image-woman-in-videocall.jpg"
+            alt="A woman sitting down while video chatting on a laptop"
+            class="main-content__image"
+          />
+          <img
+            src="assets/desktop/image-men-in-meeting.jpg"
+            alt="Looking over the shoulder of a man sitting down while video chatting on a laptop"
+            class="main-content__image"
+          />
+          <img
+            src="assets/desktop/image-man-texting.jpg"
+            alt="A man texting on a phone while sitting down"
+            class="main-content__image"
+          />
+        </div>
+        <div class="text-content">
+          <div class="text-content__title">
+            <p class="text-content__top-title">Built for modern use</p>
+            <h2 class="text-content__main-title">
+              Smarter meetings, all in one place
+            </h2>
+          </div>
+          <p class="text-content__description">
+            Send messages, share files, show your screen, and record your
+            meetings — all in one workspace. Control who can join with
+            invite-only team access, data encryption, and data export.
+          </p>
+        </div>
+      </section>
 
-  02
-  Experience more together
-  Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
-
-  Download v1.3
-</body>
+      <!-- Footer -->
+      <footer class="footer-cta">
+        <div class="footer-cta__number">02</div>
+        <div class="footer-cta__group">
+          <h2 class="footer-cta__title">Experience more together</h2>
+          <p class="footer-cta__description">
+            Stay connected with reliable HD meetings and unlimited one-on-one
+            and group video sessions.
+          </p>
+          <a href="" class="footer-cta__button-download">Download v1.3</a>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
