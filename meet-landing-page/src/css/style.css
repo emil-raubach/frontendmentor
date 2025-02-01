@@ -1,8 +1,8 @@
-@use "variables";
+@import "reset.css";
 
 .page {
   max-width: 1440px;
   max-height: 100vh;
   margin: 0 auto;
-  font-family: variables.$font-primary;
+  font-family: "Red Hat Display", sans-serif;
 }
