@@ -23,10 +23,10 @@
 
     <title>Frontend Mentor | Meet landing page</title>
   </head>
-  <body>
-    <main>
+  <body class="page">
+    <main class="main">
       <!-- Navbar -->
-      <nav>
+      <nav class="navbar">
         <div class="logo">
           <img src="assets/logo.svg" alt="The meet logo" class="logo__image" />
         </div>
@@ -36,7 +36,11 @@
       <div class="hero">
         <div class="hero__faces-left">
           <!-- Update to add `srcset` for all screen sizes -->
-          <img src="assets/" alt="" class="hero__faces-left-image" />
+          <img
+            src="assets/desktop/image-hero-left.png"
+            alt=""
+            class="hero__faces-left-image"
+          />
         </div>
         <div class="text-content">
           <h1 class="text-content__title">Group Chat for Everyone</h1>
@@ -48,6 +52,14 @@
             <a href="#" class="text-content__button-download">Download v1.3</a>
             <a href="#" class="text-content__button-info">What is it?</a>
           </div>
+        </div>
+        <div class="hero__faces-right">
+          <!-- Update to add `srcset` for all screen sizes -->
+          <img
+            src="assets/desktop/image-hero-right.png"
+            alt=""
+            class="hero__faces-right-image"
+          />
         </div>
       </div>
 
@@ -94,7 +106,7 @@
       <!-- Footer -->
       <footer class="footer-cta">
         <div class="footer-cta__number">02</div>
-        <div class="footer-cta__group">
+        <div class="footer-cta__content">
           <h2 class="footer-cta__title">Experience more together</h2>
           <p class="footer-cta__description">
             Stay connected with reliable HD meetings and unlimited one-on-one

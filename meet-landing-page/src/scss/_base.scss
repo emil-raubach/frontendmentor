@@ -1,0 +1,8 @@
+@use "variables";
+
+.page {
+  max-width: 1440px;
+  max-height: 100vh;
+  margin: 0 auto;
+  font-family: variables.$font-primary;
+}
