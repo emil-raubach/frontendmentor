@@ -3,6 +3,13 @@
 // Typography
 $font-primary: "Red Hat Display", sans-serif;
 
+// Components
+.text_preset_1 {
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: 0px;
+}
+
 // Colors
 $cyan-600: hsl(192, 37%, 48%);
 $cyan-300: hsl(192, 90%, 77%);
@@ -12,3 +19,49 @@ $slate-900: hsl(240, 21%, 20%);
 $slate-600: hsl(240, 10%, 57%);
 $slate-300: hsl(240, 18%, 85%);
 $white: hsl(0, 0%, 98%);
+
+// Main page
+.page {
+  max-width: 1440px;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+  font-family: $font-primary;
+}
+
+// Nav
+.navbar {
+  width: 100%;
+}
+
+// Logo
+.logo {
+  width: 226px;
+  height: 178px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo__image {
+  max-width: 119px;
+  max-height: 28px;
+}
+
+// Hero
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.text-content {
+  max-width: 448px;
+  height: 314px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
