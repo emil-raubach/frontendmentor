@@ -1,14 +1,33 @@
 @use "reset";
 
+// mixins
+@mixin text_preset($font-size, $line-height, $letter-spacing, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  font-weight: $font-weight;
+}
+
+@mixin btn($bg-color, $padding: 1rem 2.5rem) {
+  background-color: $bg-color;
+  color: $white;
+  padding: $padding;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5em;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
 // Typography
 $font-primary: "Red Hat Display", sans-serif;
-
-// Components
-.text_preset_1 {
-  font-size: 64px;
-  line-height: 110%;
-  letter-spacing: 0px;
-}
+$font-weight-medium: 500;
+$font-weight-black: 900;
 
 // Colors
 $cyan-600: hsl(192, 37%, 48%);
@@ -22,7 +41,7 @@ $white: hsl(0, 0%, 98%);
 
 // Main page
 .page {
-  max-width: 1440px;
+  // max-width: 1440px;
   min-height: 100vh;
   display: grid;
   place-content: center;
@@ -55,6 +74,14 @@ $white: hsl(0, 0%, 98%);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  max-width: 1440px;
+  max-height: 488px;
+  margin-bottom: 8rem;
+}
+
+.hero__faces-left {
+  max-width: 394px;
+  max-height: 303px;
 }
 
 .text-content {
@@ -64,4 +91,104 @@ $white: hsl(0, 0%, 98%);
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.text-content__title {
+  @include text_preset(64px, 110%, 0px, 900);
+  margin: 0 8rem;
+}
+
+.text-content__description {
+  @include text_preset(18px, 110%, 0px, 500);
+  color: $slate-600;
+}
+
+.text-content__button-group {
+  width: 371px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-content__button-download {
+  @include btn($cyan-600);
+  max-width: 193px;
+  max-height: 56px;
+
+  & span {
+    color: $cyan-300;
+  }
+}
+
+.text-content__button-info {
+  @include btn($purple-600);
+}
+
+.hero__faces-rigth {
+  max-width: 394px;
+  max-height: 303px;
+}
+
+// Main content
+.main-content {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.main-content__number {
+  margin: 0 auto 2rem;
+  width: 56px;
+  height: 56px;
+  color: $slate-600;
+  border: 1px solid $slate-300;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content__image-collage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.main-content__image {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 8px;
+}
+
+.main-content-text {
+  max-width: 544px;
+  margin: 4rem auto 4.5rem;
+}
+
+.main-content-text__title {
+  text-align: center;
+}
+
+.main-content-text__top-title {
+  @include text_preset(16px, 110%, 4px, 900);
+  color: $cyan-600;
+  text-transform: uppercase;
+}
+
+.main-content-text__main-title {
+  @include text_preset((40px), 110%, 0px, 900);
+  color: $slate-900;
+  padding: 1rem 3rem 2rem;
+}
+
+.main-content-text__description {
+  text-align: center;
+  color: $slate-600;
+  padding: 0 2rem;
+}
+
+// Footer
+// TODO:  Add background image(s)!
+.footer-cta {
+  background-image: url("../assets/desktop/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
