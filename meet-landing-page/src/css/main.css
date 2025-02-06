@@ -100,10 +100,15 @@ select {
 .hero {
   display: grid;
   max-width: 1440px;
+  column-gap: clamp(10px, 5vw, 8rem);
+  align-items: center;
   margin-bottom: 4rem;
 }
 
 .hero__faces-left {
+  width: clamp(150px, 25vw, 19rem);
+  max-width: 19rem;
+  object-fit: cover;
   grid-row: 1;
   grid-column: 1;
   display: flex;
@@ -114,9 +119,7 @@ select {
 .text-content {
   max-width: 28rem;
   height: 19.625em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   grid-row: 1;
   grid-column: 2;
 }
@@ -138,7 +141,7 @@ select {
   font-weight: 500;
   color: hsl(240, 10%, 57%);
   margin-bottom: 2rem;
-  padding: 0 1rem;
+  padding-inline: 1rem;
 }
 
 .text-content__button-group {
@@ -183,6 +186,8 @@ select {
 }
 
 .hero__faces-right {
+  width: clamp(150px, 25vw, 19rem);
+  object-fit: cover;
   display: flex;
   justify-content: flex-start;
   grid-row: 1;
