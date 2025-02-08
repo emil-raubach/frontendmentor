@@ -71,9 +71,9 @@ $white: hsl(0, 0%, 98%);
 // Hero
 .hero {
   display: grid;
-  grid-template-columns: 1fr 28rem 1fr;
-  max-width: 1440px;
+  grid-template-columns: 1fr 30rem 1fr;
   column-gap: clamp(10px, 5vw, 8rem);
+  max-width: 1440px;
   align-items: center;
   margin-bottom: 4rem;
 }
@@ -119,7 +119,7 @@ $white: hsl(0, 0%, 98%);
 .text-content__button-group {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .text-content__button-download {
@@ -240,6 +240,7 @@ $white: hsl(0, 0%, 98%);
 }
 
 .main-content__number {
+  background-color: $white;
   margin: 0 auto;
   width: 56px;
   height: 56px;
@@ -253,6 +254,8 @@ $white: hsl(0, 0%, 98%);
   align-items: center;
   position: relative;
   margin-block-start: 8.5rem;
+  bottom: -28px;
+  z-index: 10;
 }
 
 // Footer
@@ -285,25 +288,12 @@ $white: hsl(0, 0%, 98%);
   background: rgba($color: $cyan-600, $alpha: 0.8);
 }
 
-.footer-cta__number {
-  margin: 0 auto;
-  width: 56px;
-  height: 56px;
-  color: $slate-600;
-  border: 1px solid $slate-300;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // bottom: -28px;
-}
-
 .footer-cta__content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   height: 100%;
   align-items: center;
-  margin: 0 10rem;
+  margin: 0 5rem;
 }
 
 .footer-cta__title {
@@ -311,13 +301,14 @@ $white: hsl(0, 0%, 98%);
   color: $white;
   z-index: 10;
   text-align: left;
+  max-width: 28rem;
 }
 
 .footer-cta__description {
   color: $white;
   z-index: 10;
   text-align: left;
-  justify-self: center;
+  max-width: 20rem;
 }
 
 .footer-cta__button-download {
@@ -325,7 +316,10 @@ $white: hsl(0, 0%, 98%);
   max-width: 193px;
   max-height: 56px;
   z-index: 10;
-  justify-self: end;
+
+  & span {
+    color: $purple-300;
+  }
 }
 
 // Media Queries

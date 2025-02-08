@@ -99,9 +99,9 @@ select {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 28rem 1fr;
-  max-width: 1440px;
+  grid-template-columns: 1fr 30rem 1fr;
   column-gap: clamp(10px, 5vw, 8rem);
+  max-width: 1440px;
   align-items: center;
   margin-bottom: 4rem;
 }
@@ -145,7 +145,7 @@ select {
 .text-content__button-group {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .text-content__button-download {
@@ -291,6 +291,7 @@ select {
 }
 
 .main-content__number {
+  background-color: hsl(0, 0%, 98%);
   margin: 0 auto;
   width: 56px;
   height: 56px;
@@ -304,6 +305,8 @@ select {
   align-items: center;
   position: relative;
   margin-block-start: 8.5rem;
+  bottom: -28px;
+  z-index: 10;
 }
 
 .footer-cta {
@@ -330,24 +333,12 @@ select {
   background: rgba(77.112, 149.5728, 167.688, 0.8);
 }
 
-.footer-cta__number {
-  margin: 0 auto;
-  width: 56px;
-  height: 56px;
-  color: hsl(240, 10%, 57%);
-  border: 1px solid hsl(240, 18%, 85%);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .footer-cta__content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   height: 100%;
   align-items: center;
-  margin: 0 10rem;
+  margin: 0 5rem;
 }
 
 .footer-cta__title {
@@ -358,13 +349,14 @@ select {
   color: hsl(0, 0%, 98%);
   z-index: 10;
   text-align: left;
+  max-width: 28rem;
 }
 
 .footer-cta__description {
   color: hsl(0, 0%, 98%);
   z-index: 10;
   text-align: left;
-  justify-self: center;
+  max-width: 20rem;
 }
 
 .footer-cta__button-download {
@@ -380,8 +372,10 @@ select {
   max-width: 193px;
   max-height: 56px;
   z-index: 10;
-  justify-self: end;
 }
 .footer-cta__button-download:hover {
   opacity: 0.9;
+}
+.footer-cta__button-download span {
+  color: hsl(268, 100%, 86%);
 }
