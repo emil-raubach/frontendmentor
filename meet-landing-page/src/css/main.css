@@ -99,6 +99,7 @@ select {
 
 .hero {
   display: grid;
+  grid-template-columns: 1fr 28rem 1fr;
   max-width: 1440px;
   column-gap: clamp(10px, 5vw, 8rem);
   align-items: center;
@@ -106,8 +107,6 @@ select {
 }
 
 .hero__faces-left {
-  width: clamp(150px, 25vw, 19rem);
-  max-width: 19rem;
   object-fit: cover;
   grid-row: 1;
   grid-column: 1;
@@ -118,7 +117,6 @@ select {
 
 .text-content {
   max-width: 28rem;
-  height: 19.625em;
   text-align: center;
   grid-row: 1;
   grid-column: 2;
@@ -186,7 +184,6 @@ select {
 }
 
 .hero__faces-right {
-  width: clamp(150px, 25vw, 19rem);
   object-fit: cover;
   display: flex;
   justify-content: flex-start;
@@ -280,16 +277,44 @@ select {
   padding: 0 2rem;
 }
 
+.main-content__number::before {
+  content: "";
+  background-color: hsl(240, 18%, 85%);
+  width: 1px;
+  height: 84px;
+  bottom: 56px;
+  position: absolute;
+  left: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content__number {
+  margin: 0 auto;
+  width: 56px;
+  height: 56px;
+  color: hsl(240, 10%, 57%);
+  border: 1px solid hsl(240, 18%, 85%);
+  border-radius: 50%;
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-block-start: 8.5rem;
+}
+
 .footer-cta {
-  margin: 136px auto 0;
+  max-width: 1440px;
+  bottom: 0;
+  left: 0;
 }
 
 .footer-cta__container {
-  max-width: 1440px;
-  height: 420px;
-  background-image: url("../assets/desktop/image-footer.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 100%;
+  background: url("../assets/desktop/image-footer.jpg") center/cover no-repeat;
   text-align: center;
   position: relative;
   height: 312px;
@@ -318,7 +343,8 @@ select {
 }
 
 .footer-cta__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   height: 100%;
   align-items: center;
   margin: 0 10rem;
@@ -331,4 +357,31 @@ select {
   font-weight: 900;
   color: hsl(0, 0%, 98%);
   z-index: 10;
+  text-align: left;
+}
+
+.footer-cta__description {
+  color: hsl(0, 0%, 98%);
+  z-index: 10;
+  text-align: left;
+  justify-self: center;
+}
+
+.footer-cta__button-download {
+  background-color: hsl(268, 34%, 53%);
+  color: hsl(0, 0%, 98%);
+  padding: 1rem 2.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5em;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  max-width: 193px;
+  max-height: 56px;
+  z-index: 10;
+  justify-self: end;
+}
+.footer-cta__button-download:hover {
+  opacity: 0.9;
 }
