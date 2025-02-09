@@ -270,22 +270,23 @@ $white: hsl(0, 0%, 98%);
 .footer-cta__container {
   // height: 420px;
   width: 100%;
-  background: url("../assets/desktop/image-footer.jpg") center/cover no-repeat;
   text-align: center;
   position: relative;
   height: 20rem;
   // display: flex;
   // align-items: center;
+  background: rgba($color: $cyan-600, $alpha: 0.8);
 }
 
 .footer-cta__container::before {
   content: "";
+  opacity: 0.1;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba($color: $cyan-600, $alpha: 0.8);
+  background: url("../assets/desktop/image-footer.jpg") center/cover no-repeat;
 }
 
 .footer-cta__content {
@@ -364,6 +365,10 @@ $white: hsl(0, 0%, 98%);
     margin-bottom: 1rem;
   }
 
+  .footer-cta__container {
+    height: 28rem;
+  }
+
   .footer-cta__content {
     flex-direction: column;
     justify-content: space-evenly;
@@ -381,5 +386,41 @@ $white: hsl(0, 0%, 98%);
 
   .footer-cta__description {
     max-width: 50ch;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .text-content {
+    grid-column: 2 / 4;
+    place-content: center;
+  }
+
+  .text-content__title {
+    font-size: 2.5rem;
+  }
+
+  .text-content__description {
+    padding-inline: 1.15rem;
+  }
+
+  .text-content__button-group {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+  }
+
+  .main-content__image-collage {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 1rem;
+  }
+
+  .main-content-text__main-title {
+    font-size: 2rem;
+    padding-inline: 1.55rem;
+  }
+
+  .footer-cta__content {
+    margin-inline: 1.25rem;
   }
 }
